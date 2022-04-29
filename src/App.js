@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import Hero from "./components/Hero";
+import Fundraiser from "./components/Fundraiser";
+import Donate from "./components/Donate";
+import Contact from "./components/Contact";
+import { HeaderResponsive } from "./components/Header.tsx";
+import FooterSimple from "./components/FooterLinks.tsx";
 
 function App() {
+  const links = [
+    {
+      label: "Fundraiser",
+      link: "#fundraiser",
+    },
+    {
+      label: "Donation",
+      link: "#donation",
+    },
+    {
+      label: "Contact",
+      link: "#contact",
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <HeaderResponsive links={links} />
+      <Hero />
+      <div className="lg:grid lg:grid-cols-2">
+        <Fundraiser />
+        <div className="md:grid md:grid-cols-2 lg:block">
+          <Donate />
+          <Contact />
+        </div>
+      </div>
+      <FooterSimple links={links} />
+    </>
   );
 }
 

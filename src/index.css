@@ -1,13 +1,55 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+:root {
+  --primary: rgb(179, 50, 11);
+  --secondary: rgb(255, 184, 188);
+}
+
+@tailwind base;
+@tailwind components;
+
+@layer base {
+  .bg-primary {
+    background-color: var(--primary);
+  }
+  .text-primary {
+    color: var(--primary);
+  }
+  .bg-secondary {
+    background-color: var(--secondary);
+  }
+  .text-secondary {
+    color: var(--secondary);
+  }
+
+  .heading {
+    @apply text-2xl font-bold text-primary text-center my-4 sm:text-3xl sm:mb-6;
+  }
+  .desc {
+    @apply text-sm text-left my-4 sm:text-base;
+  }
+  .desc h3 {
+    @apply text-base font-semibold my-1 sm:text-lg text-primary lg:text-2xl lg:font-normal;
+  }
+  .section {
+    @apply p-5 sm:p-10 lg:px-12 py-8;
+  }
+  .frame {
+    border-color: var(--secondary);
+  }
+  .frame {
+    @apply border-2 border-solid;
+  }
+}
+@tailwind utilities;
