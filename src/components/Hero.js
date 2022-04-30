@@ -1,6 +1,6 @@
 import React from "react";
 import { Title, Button, Overlay, createStyles } from "@mantine/core";
-import { AiOutlineDown } from "react-icons/ai";
+import { BsChevronDown } from "react-icons/bs";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
@@ -33,7 +33,7 @@ const useStyles = createStyles((theme) => ({
   title: {
     fontWeight: 800,
     fontSize: 40,
-    letterSpacing: -1,
+    letterSpacing: 0,
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
     color: theme.white,
@@ -164,7 +164,7 @@ export default function Hero() {
           </a>
         </div>
         <div className="w-5 -mb-5 m-auto relative py-2 mt-6 sm:w-8 sm:-mb-8 sm:mt-8 sm:h-8">
-          <AiOutlineDown
+          <BsChevronDown
             className="animate-bounce w-full h-auto"
             color={"white"}
           />
