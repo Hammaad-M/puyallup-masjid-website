@@ -51,5 +51,8 @@ code {
   .frame {
     @apply border-2 border-solid;
   }
+  video {
+    @apply rounded-lg shadow-md h-min w-full;
+  }
 }
 @tailwind utilities;

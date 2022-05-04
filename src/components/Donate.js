@@ -3,7 +3,7 @@ import { List, ThemeIcon } from "@mantine/core";
 import { SiZelle } from "react-icons/si";
 import { FaMoneyCheck } from "react-icons/fa";
 import { BsCash } from "react-icons/bs";
-
+import PrimaryButton from "./PrimaryButton";
 const Donate = () => {
   const donationOptions = [
     { o: "Zelle: puyallupmasjid@gmail.com", i: <SiZelle /> },
@@ -42,9 +42,7 @@ const Donate = () => {
           rel="noreferrer"
           href="https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiUHV5YWxsdXAgSXNsYW1pYyBDb21tdW5pdHkgQ2VudGVyIiwiYWN0aW9uIjoicGF5bWVudCIsInRva2VuIjoicHV5YWxsdXBtYXNqaWRAZ21haWwuY29tIn0="
         >
-          <button className="px-6 py-2 text-white text-lg rounded-sm bg-primary hover:shadow-lg hover:border hover:border-1 hover:border-orange-700 hover:bg-white hover:text-orange-700">
-            Donate with Zelle
-          </button>
+          <PrimaryButton text={"Donate with Zelle"} />
         </a>
       </div>
     </div>

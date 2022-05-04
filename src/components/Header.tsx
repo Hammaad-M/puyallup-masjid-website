@@ -119,7 +119,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   ));
 
   return (
-    <Header height={HEADER_HEIGHT} mb={opened ? 140 : 0}>
+    <Header height={HEADER_HEIGHT} mb={opened ? 185 : 0}>
       <Container className={classes.header}>
         <Logo />
         <Group spacing={5} className={classes.links}>
