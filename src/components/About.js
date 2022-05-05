@@ -15,6 +15,7 @@ const About = () => {
       <div className="relative w-full m-auto py-3 md:w-9/12 xl:w-8/12 h-min">
         <video
           src="intro.mp4"
+          poster="images/video-poster.jpeg"
           className="h-72 sm:h-auto"
           preload="auto"
           autoPlay
