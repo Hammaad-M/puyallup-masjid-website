@@ -3,12 +3,17 @@ import { Title, Button, Overlay, createStyles } from "@mantine/core";
 import { BsChevronDown } from "react-icons/bs";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { Fade } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
+
+const fadeImages = ["images/masjid.jpg", "images/masjid-close.jpg"];
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
     position: "relative",
     paddingTop: 180,
     paddingBottom: 130,
+    // backgroundColor: "var(--primary)",
     backgroundImage: "url(images/masjid.jpg)",
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -104,6 +109,18 @@ export default function Hero() {
 
   return (
     <div className={classes.wrapper + " relative"}>
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="slide-container w-full max-h-full h-full  overflow-hidden">
+          <Fade duration={3000} arrows={false}>
+            <div className="each-fade">
+              <img src={fadeImages[0]} />
+            </div>
+            <div className="each-fade">
+              <img src={fadeImages[1]} />
+            </div>
+          </Fade>
+        </div>
+      </div>
       <Overlay color="#000" opacity={0.65} zIndex={1} />
 
       <div className={classes.inner + " w-full text-center text-primary"}>

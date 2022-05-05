@@ -1,6 +1,6 @@
 import React from "react";
 import PrimaryButton from "./PrimaryButton";
-
+import { BsFacebook } from "react-icons/bs";
 const About = () => {
   return (
     <div
@@ -31,7 +31,11 @@ const About = () => {
           rel="noreferrer"
           href="https://www.facebook.com/groups/664727081179860/?ref=share"
         >
-          <PrimaryButton inversed={true} text={"Visit our Facebook page!"} />
+          <PrimaryButton
+            icon={<BsFacebook />}
+            inversed={true}
+            text={"Visit our Facebook page!"}
+          />
         </a>
       </div>
     </div>

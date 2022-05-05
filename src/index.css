@@ -54,5 +54,15 @@ code {
   video {
     @apply rounded-lg shadow-md h-min w-full;
   }
+  .slide-container img {
+    width: 100% !important;
+    height: 500px !important;
+  }
+  @media only screen and (min-width: 685px) {
+    .slide-container img {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
 }
 @tailwind utilities;

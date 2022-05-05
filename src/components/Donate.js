@@ -42,7 +42,7 @@ const Donate = () => {
           rel="noreferrer"
           href="https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiUHV5YWxsdXAgSXNsYW1pYyBDb21tdW5pdHkgQ2VudGVyIiwiYWN0aW9uIjoicGF5bWVudCIsInRva2VuIjoicHV5YWxsdXBtYXNqaWRAZ21haWwuY29tIn0="
         >
-          <PrimaryButton text={"Donate with Zelle"} />
+          <PrimaryButton icon={<SiZelle />} text={"Donate with Zelle"} />
         </a>
       </div>
     </div>
